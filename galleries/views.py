@@ -30,7 +30,7 @@ def image(request,image_id):
     try:
         image=Image.objects.get(id=image_id)
     except DoesNotExist:
-        raise Http404()
+        raise Http404 ()
     return render (request,"all-photo/image.html",{"image":image})
 
 def filter_by_location(request,location_id):
